@@ -88,7 +88,12 @@
                       <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
                       <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="1271" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jButton_Show_Object_Count" pref="350" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="915" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -99,31 +104,37 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel_Host_Name" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton_Show_Object_Count" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Port" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField_Port" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_User_Name" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Password" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPasswordField_DB_Password" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Source_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Destination_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_Port" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField_Port" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_User_Name" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_Password" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPasswordField_DB_Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_Source_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_Destination_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="705" max="32767" attributes="0"/>
               </Group>
@@ -197,6 +208,56 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField_Destination_DB">
         </Component>
+        <Component class="javax.swing.JButton" name="jButton_Show_Object_Count">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Show Object Count"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_Show_Object_CountActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable_Object_Count">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="3" rowCount="0">
+                    <Column editable="true" title="DB" type="java.lang.Object"/>
+                    <Column editable="true" title="Object Type" type="java.lang.Object"/>
+                    <Column editable="true" title="Count" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>
