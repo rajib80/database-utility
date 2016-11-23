@@ -69,36 +69,54 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel_Host_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Port" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_User_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Password" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Source_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Destination_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="jButton_Show_Differences_in_Columns" min="-2" pref="350" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jScrollPane4" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel_Host_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_Port" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_User_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_Password" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_Source_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_Destination_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTextField_Host_Name" max="32767" attributes="0"/>
+                                      <Component id="jTextField_Port" max="32767" attributes="0"/>
+                                      <Component id="jTextField_User_Name" max="32767" attributes="0"/>
+                                      <Component id="jPasswordField_DB_Password" max="32767" attributes="0"/>
+                                      <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
+                                      <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButton_Show_Object_Count" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="400" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane2" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                                      <Component id="jButton_Show_Tables_not_in_Destination_DB" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButton_Show_Tables_not_in_Source_DB" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane3" min="-2" pref="400" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jTextField_Host_Name" max="32767" attributes="0"/>
-                      <Component id="jTextField_Port" max="32767" attributes="0"/>
-                      <Component id="jTextField_User_Name" max="32767" attributes="0"/>
-                      <Component id="jPasswordField_DB_Password" max="32767" attributes="0"/>
-                      <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
-                      <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton_Show_Object_Count" min="-2" pref="350" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="400" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton_Show_Tables_not_in_Destination_DB" min="-2" pref="350" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="400" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="459" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,6 +129,7 @@
                       <Component id="jTextField_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton_Show_Object_Count" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton_Show_Tables_not_in_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton_Show_Tables_not_in_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -142,8 +161,13 @@
                       </Group>
                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="705" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton_Show_Differences_in_Columns" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace pref="454" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -289,6 +313,184 @@
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton_Show_Tables_not_in_Source_DB">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Show Tables not in Source DB"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_Show_Tables_not_in_Source_DBActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable_Tables_not_in_Source_DB">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="1" rowCount="0">
+                    <Column editable="true" title="Tables not in Source DB" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton_Show_Differences_in_Columns">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Show Differences in Columns"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_Show_Differences_in_ColumnsActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable_Differences_in_Columns">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="18" rowCount="0">
+                    <Column editable="false" title="S_TABLE_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="S_COLUMN_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="S_ORDINAL_POSITION" type="java.lang.Object"/>
+                    <Column editable="false" title="S_COLUMN_DEFAULT" type="java.lang.Object"/>
+                    <Column editable="false" title="S_IS_NULLABLE" type="java.lang.Object"/>
+                    <Column editable="false" title="S_NUMERIC_PRECISION" type="java.lang.Object"/>
+                    <Column editable="false" title="S_COLLATION_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="S_COLUMN_TYPE" type="java.lang.Object"/>
+                    <Column editable="false" title="S_COLUMN_KEY" type="java.lang.Object"/>
+                    <Column editable="false" title="D_TABLE_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="D_COLUMN_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="D_ORDINAL_POSITION" type="java.lang.Object"/>
+                    <Column editable="false" title="D_COLUMN_DEFAULT" type="java.lang.Object"/>
+                    <Column editable="false" title="D_IS_NULLABLE" type="java.lang.Object"/>
+                    <Column editable="false" title="D_NUMERIC_PRECISION" type="java.lang.Object"/>
+                    <Column editable="false" title="D_COLLATION_NAME" type="java.lang.Object"/>
+                    <Column editable="false" title="D_COLUMN_TYPE" type="java.lang.Object"/>
+                    <Column editable="false" title="D_COLUMN_KEY" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
