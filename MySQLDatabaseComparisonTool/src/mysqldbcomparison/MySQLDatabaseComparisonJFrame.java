@@ -61,6 +61,9 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         jButton_Show_Differences_in_Columns = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable_Differences_in_Columns = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable_Routines_not_in_Destination_DB = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -168,6 +171,31 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(jTable_Differences_in_Columns);
 
+        jButton1.setText("Show Routines not in Destination DB");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTable_Routines_not_in_Destination_DB.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Routines not in Destination DB"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jTable_Routines_not_in_Destination_DB);
+
         javax.swing.GroupLayout jPanel_MySQLDBComparisonLayout = new javax.swing.GroupLayout(jPanel_MySQLDBComparison);
         jPanel_MySQLDBComparison.setLayout(jPanel_MySQLDBComparisonLayout);
         jPanel_MySQLDBComparisonLayout.setHorizontalGroup(
@@ -175,9 +203,6 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
             .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
-                        .addComponent(jButton_Show_Differences_in_Columns, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
                         .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane4)
@@ -209,7 +234,13 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton_Show_Tables_not_in_Source_DB, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(17, 17, 17))))
+                        .addGap(17, 17, 17))
+                    .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
+                        .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton_Show_Differences_in_Columns, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jPanel_MySQLDBComparisonLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel_Destination_DB, jLabel_Host_Name, jLabel_Password, jLabel_Port, jLabel_Source_DB, jLabel_User_Name});
@@ -253,7 +284,11 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 .addComponent(jButton_Show_Differences_in_Columns)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(277, 277, 277))
         );
 
         jPanel_MySQLDBComparisonLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel_Destination_DB, jLabel_Host_Name, jLabel_Password, jLabel_Port, jLabel_Source_DB, jLabel_User_Name});
@@ -658,6 +693,70 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_Show_Differences_in_ColumnsActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try{
+            Connection conn = getDatabaseConnection();
+            
+            if(conn != null){
+                if(!hasUserProvidedSourceAndDestinationDatabase())
+                    return;
+                
+                Statement stmt = conn.createStatement();
+
+                String sourceDatabase = jTextField_Source_DB.getText();
+                String destinationDatabase = jTextField_Destination_DB.getText();
+
+                String query = "SELECT a.ROUTINE_NAME, a.ROUTINE_TYPE";
+                query = query + " FROM";
+                query = query + " (";
+                query = query + " SELECT ROUTINE_NAME, ROUTINE_TYPE";
+                query = query + " FROM INFORMATION_SCHEMA.ROUTINES";
+                query = query + " WHERE ROUTINE_SCHEMA = '"+ sourceDatabase +"'";
+                query = query + " ) a";
+                query = query + " LEFT JOIN";
+                query = query + " (";
+                query = query + " SELECT ROUTINE_NAME, ROUTINE_TYPE";
+                query = query + " FROM INFORMATION_SCHEMA.ROUTINES";
+                query = query + " WHERE ROUTINE_SCHEMA = '"+ destinationDatabase +"'";
+                query = query + " ) b ON a.ROUTINE_NAME = b.ROUTINE_NAME AND a.ROUTINE_TYPE = b.ROUTINE_TYPE";
+                query = query + " WHERE b.ROUTINE_NAME IS NULL";
+                query = query + " ORDER BY a.ROUTINE_NAME;";
+
+                ResultSet rs = stmt.executeQuery(query);
+
+                ResultSetMetaData rsmt = rs.getMetaData();
+
+                int columnCount = rsmt.getColumnCount();
+
+                DefaultTableModel model = (DefaultTableModel)jTable_Routines_not_in_Destination_DB.getModel();
+
+                int rowCount = model.getRowCount();
+                
+                for (int i = rowCount - 1; i >= 0; i--) {
+                    model.removeRow(i);
+                }
+                
+                Vector<String> row;
+                
+                while(rs.next()){
+                    row = new Vector<String>(columnCount);
+                    for(int i = 1; i <= columnCount; i++){
+                        row.add(rs.getString(i));
+                    }
+
+                    model.addRow(row);
+                }
+
+                rs.close();
+                stmt.close();
+                conn.close();
+            }
+        }catch(Exception ex){
+            JFrame frame = new JFrame("JOptionPane showMessageDialog example");
+            JOptionPane.showMessageDialog(frame, "Error: " + ex.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -694,6 +793,7 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_Show_Differences_in_Columns;
     private javax.swing.JButton jButton_Show_Object_Count;
     private javax.swing.JButton jButton_Show_Tables_not_in_Destination_DB;
@@ -710,8 +810,10 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable_Differences_in_Columns;
     private javax.swing.JTable jTable_Object_Count;
+    private javax.swing.JTable jTable_Routines_not_in_Destination_DB;
     private javax.swing.JTable jTable_Tables_not_in_Destination_DB;
     private javax.swing.JTable jTable_Tables_not_in_Source_DB;
     private javax.swing.JTextField jTextField_Destination_DB;
