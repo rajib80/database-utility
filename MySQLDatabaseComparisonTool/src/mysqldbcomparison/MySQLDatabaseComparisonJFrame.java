@@ -52,6 +52,9 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         jButton_Show_Object_Count = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_Object_Count = new javax.swing.JTable();
+        jButton_Show_Tables_not_in_Destination_DB = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable_Tables_not_in_Destination_DB = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +103,23 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable_Object_Count);
 
+        jButton_Show_Tables_not_in_Destination_DB.setText("Show Tables not in Destination DB");
+        jButton_Show_Tables_not_in_Destination_DB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Show_Tables_not_in_Destination_DBActionPerformed(evt);
+            }
+        });
+
+        jTable_Tables_not_in_Destination_DB.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Tables not in Destination DB"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable_Tables_not_in_Destination_DB);
+
         javax.swing.GroupLayout jPanel_MySQLDBComparisonLayout = new javax.swing.GroupLayout(jPanel_MySQLDBComparison);
         jPanel_MySQLDBComparison.setLayout(jPanel_MySQLDBComparisonLayout);
         jPanel_MySQLDBComparisonLayout.setHorizontalGroup(
@@ -122,10 +142,14 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                     .addComponent(jTextField_Source_DB)
                     .addComponent(jTextField_Destination_DB, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton_Show_Object_Count, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(915, Short.MAX_VALUE))
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_Show_Object_Count, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_Show_Tables_not_in_Destination_DB, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(459, Short.MAX_VALUE))
         );
 
         jPanel_MySQLDBComparisonLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel_Destination_DB, jLabel_Host_Name, jLabel_Password, jLabel_Port, jLabel_Source_DB, jLabel_User_Name});
@@ -137,7 +161,8 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_Host_Name)
                     .addComponent(jTextField_Host_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_Show_Object_Count))
+                    .addComponent(jButton_Show_Object_Count)
+                    .addComponent(jButton_Show_Tables_not_in_Destination_DB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
@@ -160,7 +185,8 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_Destination_DB)
                             .addComponent(jTextField_Destination_DB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(705, Short.MAX_VALUE))
         );
 
@@ -319,6 +345,70 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_Show_Object_CountActionPerformed
 
+    private void jButton_Show_Tables_not_in_Destination_DBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Show_Tables_not_in_Destination_DBActionPerformed
+        try{
+            Connection conn = getDatabaseConnection();
+            
+            if(conn != null){
+                if(!hasUserProvidedSourceAndDestinationDatabase())
+                    return;
+                
+                Statement stmt = conn.createStatement();
+
+                String sourceDatabase = jTextField_Source_DB.getText();
+                String destinationDatabase = jTextField_Destination_DB.getText();
+
+                String query = "SELECT a.TABLE_NAME";
+                query = query + " FROM";
+                query = query + " (";
+                query = query + " SELECT TABLE_NAME";
+                query = query + " FROM INFORMATION_SCHEMA.TABLES";
+                query = query + " WHERE TABLE_SCHEMA = '"+ sourceDatabase +"'";
+                query = query + " ) a";
+                query = query + " LEFT JOIN";
+                query = query + " (";
+                query = query + " SELECT TABLE_NAME";
+                query = query + " FROM INFORMATION_SCHEMA.TABLES";
+                query = query + " WHERE TABLE_SCHEMA = '"+ destinationDatabase +"'";
+                query = query + " ) b ON a.TABLE_NAME = b.TABLE_NAME";
+                query = query + " WHERE b.TABLE_NAME IS NULL";
+                query = query + " ORDER BY a.TABLE_NAME;";
+
+                ResultSet rs = stmt.executeQuery(query);
+
+                ResultSetMetaData rsmt = rs.getMetaData();
+
+                int columnCount = rsmt.getColumnCount();
+
+                DefaultTableModel model = (DefaultTableModel)jTable_Tables_not_in_Destination_DB.getModel();
+
+                int rowCount = model.getRowCount();
+
+                for (int i = rowCount - 1; i >= 0; i--) {
+                    model.removeRow(i);
+                }
+
+                Vector<String> row;
+
+                while(rs.next()){
+                    row = new Vector<String>(columnCount);
+                    for(int i = 1; i <= columnCount; i++){
+                        row.add(rs.getString(i));
+                    }
+
+                    model.addRow(row);
+                }
+
+                rs.close();
+                stmt.close();
+                conn.close();
+            }
+        }catch(Exception ex){
+            JFrame frame = new JFrame("JOptionPane showMessageDialog example");
+            JOptionPane.showMessageDialog(frame, "Error: " + ex.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton_Show_Tables_not_in_Destination_DBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -356,6 +446,7 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_Show_Object_Count;
+    private javax.swing.JButton jButton_Show_Tables_not_in_Destination_DB;
     private javax.swing.JLabel jLabel_Destination_DB;
     private javax.swing.JLabel jLabel_Host_Name;
     private javax.swing.JLabel jLabel_Password;
@@ -365,7 +456,9 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_MySQLDBComparison;
     private javax.swing.JPasswordField jPasswordField_DB_Password;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable_Object_Count;
+    private javax.swing.JTable jTable_Tables_not_in_Destination_DB;
     private javax.swing.JTextField jTextField_Destination_DB;
     private javax.swing.JTextField jTextField_Host_Name;
     private javax.swing.JTextField jTextField_Port;
