@@ -71,13 +71,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel_Destination_DB" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Source_DB" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Password" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_User_Name" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Port" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_Host_Name" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel_Host_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Port" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_User_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Password" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Source_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Destination_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -97,32 +97,32 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Host_Name" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Port" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Port" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_Port" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_User_Name" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Password" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jPasswordField_DB_Password" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Source_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Destination_DB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="705" max="32767" attributes="0"/>
@@ -136,6 +136,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Host Name "/>
           </Properties>
         </Component>
@@ -146,6 +147,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Port"/>
           </Properties>
         </Component>
@@ -156,6 +158,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="User Name"/>
           </Properties>
         </Component>
@@ -166,6 +169,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Password"/>
           </Properties>
         </Component>
@@ -176,6 +180,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Source DB"/>
           </Properties>
         </Component>
@@ -186,6 +191,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Destination DB"/>
           </Properties>
         </Component>
