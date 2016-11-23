@@ -37,6 +37,18 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel_MySQLDBComparison = new javax.swing.JPanel();
+        jLabel_Host_Name = new javax.swing.JLabel();
+        jTextField_Host_Name = new javax.swing.JTextField();
+        jLabel_Port = new javax.swing.JLabel();
+        jTextField_Port = new javax.swing.JTextField();
+        jLabel_User_Name = new javax.swing.JLabel();
+        jTextField_User_Name = new javax.swing.JTextField();
+        jLabel_Password = new javax.swing.JLabel();
+        jPasswordField_DB_Password = new javax.swing.JPasswordField();
+        jLabel_Source_DB = new javax.swing.JLabel();
+        jTextField_Source_DB = new javax.swing.JTextField();
+        jLabel_Destination_DB = new javax.swing.JLabel();
+        jTextField_Destination_DB = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,15 +56,75 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
         jPanel_MySQLDBComparison.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "MySQL Database Comparison Tool", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Courier 10 Pitch", 1, 24), java.awt.Color.white)); // NOI18N
         jPanel_MySQLDBComparison.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel_Host_Name.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Host_Name.setText("Host Name ");
+
+        jLabel_Port.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Port.setText("Port");
+
+        jLabel_User_Name.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_User_Name.setText("User Name");
+
+        jLabel_Password.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Password.setText("Password");
+
+        jLabel_Source_DB.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Source_DB.setText("Source DB");
+
+        jLabel_Destination_DB.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Destination_DB.setText("Destination DB");
+
         javax.swing.GroupLayout jPanel_MySQLDBComparisonLayout = new javax.swing.GroupLayout(jPanel_MySQLDBComparison);
         jPanel_MySQLDBComparison.setLayout(jPanel_MySQLDBComparisonLayout);
         jPanel_MySQLDBComparisonLayout.setHorizontalGroup(
             jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1576, Short.MAX_VALUE)
+            .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel_Destination_DB)
+                    .addComponent(jLabel_Source_DB)
+                    .addComponent(jLabel_Password)
+                    .addComponent(jLabel_User_Name)
+                    .addComponent(jLabel_Port)
+                    .addComponent(jLabel_Host_Name))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField_Host_Name)
+                    .addComponent(jTextField_Port)
+                    .addComponent(jTextField_User_Name)
+                    .addComponent(jPasswordField_DB_Password)
+                    .addComponent(jTextField_Source_DB)
+                    .addComponent(jTextField_Destination_DB, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addContainerGap(1271, Short.MAX_VALUE))
         );
         jPanel_MySQLDBComparisonLayout.setVerticalGroup(
             jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel_MySQLDBComparisonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Host_Name)
+                    .addComponent(jTextField_Host_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Port)
+                    .addComponent(jTextField_Port, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_User_Name)
+                    .addComponent(jTextField_User_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Password)
+                    .addComponent(jPasswordField_DB_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Source_DB)
+                    .addComponent(jTextField_Source_DB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Destination_DB)
+                    .addComponent(jTextField_Destination_DB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(705, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,6 +184,18 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel_Destination_DB;
+    private javax.swing.JLabel jLabel_Host_Name;
+    private javax.swing.JLabel jLabel_Password;
+    private javax.swing.JLabel jLabel_Port;
+    private javax.swing.JLabel jLabel_Source_DB;
+    private javax.swing.JLabel jLabel_User_Name;
     private javax.swing.JPanel jPanel_MySQLDBComparison;
+    private javax.swing.JPasswordField jPasswordField_DB_Password;
+    private javax.swing.JTextField jTextField_Destination_DB;
+    private javax.swing.JTextField jTextField_Host_Name;
+    private javax.swing.JTextField jTextField_Port;
+    private javax.swing.JTextField jTextField_Source_DB;
+    private javax.swing.JTextField jTextField_User_Name;
     // End of variables declaration//GEN-END:variables
 }

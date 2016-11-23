@@ -69,15 +69,129 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="1576" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jLabel_Destination_DB" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Source_DB" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Password" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_User_Name" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Port" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Host_Name" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jTextField_Host_Name" max="32767" attributes="0"/>
+                      <Component id="jTextField_Port" max="32767" attributes="0"/>
+                      <Component id="jTextField_User_Name" max="32767" attributes="0"/>
+                      <Component id="jPasswordField_DB_Password" max="32767" attributes="0"/>
+                      <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
+                      <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="1271" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_Host_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_Port" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_Port" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_User_Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPasswordField_DB_Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_Source_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_Destination_DB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="705" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel_Host_Name">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Host Name "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_Host_Name">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_Port">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Port"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_Port">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_User_Name">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="User Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_User_Name">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_Password">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Password"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="jPasswordField_DB_Password">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_Source_DB">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Source DB"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_Source_DB">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_Destination_DB">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Destination DB"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_Destination_DB">
+        </Component>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>
