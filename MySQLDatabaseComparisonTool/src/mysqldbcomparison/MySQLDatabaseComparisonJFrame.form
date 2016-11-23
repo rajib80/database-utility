@@ -69,67 +69,60 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jScrollPane4" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel_Host_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_Port" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_User_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_Password" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_Source_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_Destination_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField_Host_Name" max="32767" attributes="0"/>
-                                      <Component id="jTextField_Port" max="32767" attributes="0"/>
-                                      <Component id="jTextField_User_Name" max="32767" attributes="0"/>
-                                      <Component id="jPasswordField_DB_Password" max="32767" attributes="0"/>
-                                      <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
-                                      <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton_Show_Object_Count" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" min="-2" pref="400" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane2" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
-                                      <Component id="jButton_Show_Tables_not_in_Destination_DB" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton_Show_Tables_not_in_Source_DB" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane3" min="-2" pref="400" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                      <Component id="jScrollPane4" alignment="1" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton_Show_Differences_in_Columns" min="-2" pref="350" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton_Show_Routines_not_in_Destination_DB" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane6" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane5" min="-2" pref="500" max="-2" attributes="0"/>
-                                      <Component id="jButton_Show_Routines_not_in_Source_DB" min="-2" pref="350" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jLabel_Host_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_Port" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_User_Name" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_Password" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_Source_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_Destination_DB" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTextField_Host_Name" max="32767" attributes="0"/>
+                              <Component id="jTextField_Port" max="32767" attributes="0"/>
+                              <Component id="jTextField_User_Name" max="32767" attributes="0"/>
+                              <Component id="jPasswordField_DB_Password" max="32767" attributes="0"/>
+                              <Component id="jTextField_Source_DB" max="32767" attributes="0"/>
+                              <Component id="jTextField_Destination_DB" pref="200" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton_Show_Object_Count" min="-2" pref="350" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="400" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane2" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="jButton_Show_Tables_not_in_Destination_DB" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton_Show_Tables_not_in_Source_DB" min="-2" pref="350" max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" min="-2" pref="400" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <Component id="jButton_Show_Differences_in_Columns" min="-2" pref="350" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton_Show_Routines_not_in_Destination_DB" min="-2" pref="350" max="-2" attributes="0"/>
+                              <Component id="jScrollPane6" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane5" min="-2" pref="500" max="-2" attributes="0"/>
+                              <Component id="jButton_Show_Routines_not_in_Source_DB" min="-2" pref="350" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jButton_Show_Differences_in_Procedures" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                      <Component id="jScrollPane7" alignment="0" max="32767" attributes="0"/>
                   </Group>
+                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -190,7 +183,11 @@
                       <Component id="jScrollPane6" min="-2" pref="150" max="-2" attributes="0"/>
                       <Component id="jScrollPane5" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="251" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton_Show_Differences_in_Procedures" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane7" pref="194" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -590,6 +587,56 @@
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton_Show_Differences_in_Procedures">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Show Differences in Procedures"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_Show_Differences_in_ProceduresActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable_Differences_in_Procedures">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="3" rowCount="0">
+                    <Column editable="false" title="Name" type="java.lang.Object"/>
+                    <Column editable="false" title="Definition at Source" type="java.lang.Object"/>
+                    <Column editable="false" title="Definition at Destination" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
