@@ -9,6 +9,14 @@ package mysqldbcomparison;
  *
  * @author rajib
  */
+
+import com.mysql.jdbc.jdbc2.optional.*;
+import java.sql.*;
+import java.util.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JFrame;
+
 public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
 
     /**
@@ -28,20 +36,43 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel_MySQLDBComparison = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel_MySQLDBComparison.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel_MySQLDBComparison.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "MySQL Database Comparison Tool", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Courier 10 Pitch", 1, 24), java.awt.Color.white)); // NOI18N
+        jPanel_MySQLDBComparison.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel_MySQLDBComparisonLayout = new javax.swing.GroupLayout(jPanel_MySQLDBComparison);
+        jPanel_MySQLDBComparison.setLayout(jPanel_MySQLDBComparisonLayout);
+        jPanel_MySQLDBComparisonLayout.setHorizontalGroup(
+            jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1576, Short.MAX_VALUE)
+        );
+        jPanel_MySQLDBComparisonLayout.setVerticalGroup(
+            jPanel_MySQLDBComparisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel_MySQLDBComparison, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel_MySQLDBComparison, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(410, 330));
+        setSize(new java.awt.Dimension(1610, 980));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -81,5 +112,6 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel_MySQLDBComparison;
     // End of variables declaration//GEN-END:variables
 }
