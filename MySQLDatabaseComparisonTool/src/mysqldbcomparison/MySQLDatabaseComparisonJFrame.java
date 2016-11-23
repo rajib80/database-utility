@@ -73,8 +73,8 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel_MySQLDBComparison.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel_MySQLDBComparison.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "MySQL Database Comparison Tool", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Courier 10 Pitch", 1, 24), java.awt.Color.white)); // NOI18N
+        jPanel_MySQLDBComparison.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel_MySQLDBComparison.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "MySQL Database Comparison Tool", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 36), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel_MySQLDBComparison.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel_Host_Name.setForeground(new java.awt.Color(255, 255, 255));
@@ -398,7 +398,7 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton_Show_Differences_in_Procedures)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
