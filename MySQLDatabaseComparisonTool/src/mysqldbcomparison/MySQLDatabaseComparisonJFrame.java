@@ -115,8 +115,19 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
             new String [] {
                 "DB", "Object Type", "Count"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable_Object_Count.setColumnSelectionAllowed(true);
+        jTable_Object_Count.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable_Object_Count);
+        jTable_Object_Count.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Tables_not_in_Destination_DB.setText("Show Tables not in Destination DB");
         jButton_Show_Tables_not_in_Destination_DB.addActionListener(new java.awt.event.ActionListener() {
@@ -132,8 +143,19 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
             new String [] {
                 "Tables not in Destination DB"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable_Tables_not_in_Destination_DB.setColumnSelectionAllowed(true);
+        jTable_Tables_not_in_Destination_DB.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable_Tables_not_in_Destination_DB);
+        jTable_Tables_not_in_Destination_DB.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Tables_not_in_Source_DB.setText("Show Tables not in Source DB");
         jButton_Show_Tables_not_in_Source_DB.addActionListener(new java.awt.event.ActionListener() {
@@ -149,8 +171,19 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
             new String [] {
                 "Tables not in Source DB"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable_Tables_not_in_Source_DB.setColumnSelectionAllowed(true);
+        jTable_Tables_not_in_Source_DB.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(jTable_Tables_not_in_Source_DB);
+        jTable_Tables_not_in_Source_DB.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Differences_in_Columns.setText("Show Differences in Columns");
         jButton_Show_Differences_in_Columns.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +208,10 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Differences_in_Columns.setColumnSelectionAllowed(true);
+        jTable_Differences_in_Columns.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(jTable_Differences_in_Columns);
+        jTable_Differences_in_Columns.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Routines_not_in_Destination_DB.setText("Show Routines not in Destination DB");
         jButton_Show_Routines_not_in_Destination_DB.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +236,9 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Routines_not_in_Source_DB.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(jTable_Routines_not_in_Source_DB);
+        jTable_Routines_not_in_Source_DB.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Routines_not_in_Source_DB.setText("Show Routines not in Source DB");
         jButton_Show_Routines_not_in_Source_DB.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +263,10 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Routines_not_in_Destination_DB.setColumnSelectionAllowed(true);
+        jTable_Routines_not_in_Destination_DB.getTableHeader().setReorderingAllowed(false);
         jScrollPane6.setViewportView(jTable_Routines_not_in_Destination_DB);
+        jTable_Routines_not_in_Destination_DB.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         jButton_Show_Differences_in_Procedures.setText("Show Differences in Procedures");
         jButton_Show_Differences_in_Procedures.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +291,10 @@ public class MySQLDatabaseComparisonJFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Differences_in_Procedures.setColumnSelectionAllowed(true);
+        jTable_Differences_in_Procedures.getTableHeader().setReorderingAllowed(false);
         jScrollPane7.setViewportView(jTable_Differences_in_Procedures);
+        jTable_Differences_in_Procedures.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout jPanel_MySQLDBComparisonLayout = new javax.swing.GroupLayout(jPanel_MySQLDBComparison);
         jPanel_MySQLDBComparison.setLayout(jPanel_MySQLDBComparisonLayout);
